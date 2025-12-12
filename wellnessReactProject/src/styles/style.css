@@ -1,0 +1,283 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Ensure Navbar styles */
+.navbar-brand {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* Reduce Header Height */
+.header-section {
+    background-color: #a4c49a; /* Match the green theme */
+    padding: 10px 20px; /* Reduce padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+/* Proper Alignment for Header Content */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Logo Alignment */
+.header-content .navbar-brand {
+    max-width: 200px; /* Adjust size */
+    flex-shrink: 0;
+}
+
+/* Search Bar Fix */
+.header-content .search-bar {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+    margin: 0 20px;
+}
+
+.header-content .search-bar input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Align Navigation Links */
+.header-content .nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Featured Products Section - Prevent Overlapping */
+.featured-products {
+    margin-top: 30px; /* Ensure proper spacing */
+}
+
+/* Fix Carousel Image */
+.carousel-item img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Adjust Navigation Links */
+.header-content .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links .nav-item {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+.nav-links .nav-item:hover {
+    color: #2c5c2c;
+}
+
+/* Cart Link */
+.nav-links .cart {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Fix Featured Products Section Overlap */
+.featured-products {
+    margin-top: 100px; /* Add margin to prevent overlap with header */
+}
+
+/* Responsive Header Fixes */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-content .search-bar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .header-content .nav-links {
+        justify-content: center;
+    }
+
+    /* Adjust Logo for Small Screens */
+    .header-content .navbar-brand {
+        max-width: 200px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Categories */
+.categories {
+    margin-top: 20px;
+}
+
+.categories a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.categories a:hover {
+    color: #007bff;
+}
+
+/* Fix Carousel Image Cropping */
+.carousel-item img {
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+    object-fit: contain; /* Prevents cropping */
+}
+
+/* Product Listing */
+.product-listing {
+    margin-top: 20px;
+}
+
+.product-listing img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-listing .col-md-3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive Product Listing */
+@media (max-width: 768px) {
+    .product-listing .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-listing .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Adjust Carousel Responsiveness */
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #2a3b4c;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.footer ul li:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.social-icons i:hover {
+    color: #007bff;
+}
+
+/* Payment Methods */
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.payment-methods img {
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.payment-methods img:hover {
+    transform: scale(1.1);
+}
+
+/* Fix Scaling Issues */
+.card {
+    transition: transform 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card .btn {
+    margin-top: auto;
+    width: 150px;
+}
